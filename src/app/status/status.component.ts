@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import Status from './Status';
 import StatusImages from './StatusImages';
+import { StatusService } from './status.service';
 
 @Component({
   selector: 'dog-status',
@@ -10,13 +10,11 @@ import StatusImages from './StatusImages';
 })
 export class StatusComponent implements OnInit {
 
-  @Input()
-  status: Status = Status.Idle;
-
   statusImage: string;
 
-  constructor() {
-    this.statusImage = StatusImages[this.status];
+  constructor(private statusService: StatusService) {
+    this.statusService.status
+      .subscribe(status => this.statusImage = StatusImages[status]);
   }
 
   ngOnInit() {
