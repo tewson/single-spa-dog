@@ -13,7 +13,7 @@ export class StatusComponent implements OnInit {
   statusImage: string;
 
   constructor(private statusService: StatusService) {
-    this.statusService.status
+    this.statusService
       .subscribe(status => this.statusImage = StatusImages[status]);
   }
 

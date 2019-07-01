@@ -21,7 +21,7 @@ export class FeedComponent implements OnInit {
   constructor(private statusService: StatusService) { }
 
   feed(food: Food) {
-    this.statusService.status.next(foodStatusMap[food]);
+    this.statusService.setStatus(foodStatusMap[food]);
   }
 
   ngOnInit() {

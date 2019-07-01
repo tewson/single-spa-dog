@@ -14,8 +14,13 @@ export class StatusService {
     this._status = new BehaviorSubject(Status.Idle);
   }
 
-  get status() {
-    return this._status;
+  subscribe(onStatusUpdate: (status: Status) => void) {
+    this._status.subscribe(onStatusUpdate);
+  }
+
+  setStatus(status: Status) {
+    this._status.next(status);
+    setTimeout(() => this._status.next(Status.Idle), 1500);
   }
 
 }
