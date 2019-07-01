@@ -1,5 +1,7 @@
 enum Status {
-  Idle
+  Idle,
+  WithHotDog,
+  WithPizza
 }
 
 export default Status;

@@ -1,6 +1,6 @@
 <h2>Feed the dog</h2>
 <ul>
   <li *ngFor="let foodOption of foodOptions">
-    {{foodOption}}
+    <button (click)="feed(foodOption)">{{foodOption}}</button>
   </li>
 </ul>

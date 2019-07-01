@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
+import { StatusService } from '../status/status.service';
+import Status from '../status/Status';
 import Food from './Food';
+
+const foodStatusMap = {
+  [Food.HotDog]: Status.WithHotDog,
+  [Food.Pizza]: Status.WithPizza
+};
 
 @Component({
   selector: 'dog-feed',
@@ -11,7 +18,11 @@ export class FeedComponent implements OnInit {
 
   foodOptions: Food[] = Object.values(Food);
 
-  constructor() { }
+  constructor(private statusService: StatusService) { }
+
+  feed(food: Food) {
+    this.statusService.status.next(foodStatusMap[food]);
+  }
 
   ngOnInit() {
   }
