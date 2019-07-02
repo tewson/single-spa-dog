@@ -149,6 +149,7 @@
         "single-spa-serve": {
           "builder": "single-spa-angular:dev-server",
           "options": {
+            "port": 8081,
             "browserTarget": "dog:single-spa"
           },
           "configurations": {
