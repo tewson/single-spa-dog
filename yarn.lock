@@ -5950,6 +5950,19 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
   integrity sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
 
+single-spa-angular@^3.0.0-beta.25:
+  version "3.0.0-beta.25"
+  resolved "https://registry.yarnpkg.com/single-spa-angular/-/single-spa-angular-3.0.0-beta.25.tgz#fe808225d39a08ae8b70a76d82e3302964233735"
+  integrity sha512-/K6UTbasyrj04muZUO4S1fRoMbSO9mhBFt23YSFm+ENRyThFsAtRGisAMGdIUyQ/2qiVsfX4jaWtrjbcUePE7Q==
+  dependencies:
+    single-spa ">= 4.0.0"
+    webpack-merge "^4.2.1"
+
+"single-spa@>= 4.0.0":
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/single-spa/-/single-spa-4.3.5.tgz#4fcc0a16ed7bc1617f86d62d484dced24090b41a"
+  integrity sha512-iRR4ww1aYeEjlKZQPKVcjLMEsT/L9Rl8yed1NqtcABgwdRtlZhlfqtCSBMmq0Em3nmrHosc20cRavgz8wfLd/Q==
+
 slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
@@ -7029,7 +7042,7 @@ webpack-log@^2.0.0:
     ansi-colors "^3.0.0"
     uuid "^3.3.2"
 
-webpack-merge@4.2.1:
+webpack-merge@4.2.1, webpack-merge@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-4.2.1.tgz#5e923cf802ea2ace4fd5af1d3247368a633489b4"
   integrity sha512-4p8WQyS98bUJcCvFMbdGZyZmsKuWjWVnVHnAS3FFg0HDaRVrPbkivx2RYCre8UiemD67RsiFFLfn4JhLAin8Vw==

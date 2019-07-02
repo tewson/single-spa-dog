@@ -100,6 +100,62 @@
               "**/node_modules/**"
             ]
           }
+        },
+        "single-spa": {
+          "builder": "single-spa-angular:build",
+          "options": {
+            "outputPath": "dist/dog",
+            "index": "src/index.html",
+            "main": "src/main.single-spa.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": [],
+            "es5BrowserSupport": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "single-spa-serve": {
+          "builder": "single-spa-angular:dev-server",
+          "options": {
+            "browserTarget": "dog:single-spa"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "dog:build:production"
+            }
+          }
         }
       }
     },
